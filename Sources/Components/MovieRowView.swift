@@ -1,5 +1,4 @@
 import SwiftUI
-import Core
 import Kingfisher
 
 public struct MovieRowView: View {
