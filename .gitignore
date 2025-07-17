@@ -1,0 +1,17 @@
+# Xcode
+build/
+*.xcodeproj
+*.xcworkspace
+*.xcshareddata
+*.xccheckout
+*.xcuserdatad
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+Package.pins
+.swiftpm/
+
+# macOS
+.DS_Store
