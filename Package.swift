@@ -3,7 +3,6 @@ import PackageDescription
 
 let package = Package(
     name: "Shared",
-    defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
         .macOS(.v12)
@@ -20,8 +19,7 @@ let package = Package(
     targets: [
         .target(
             name: "Shared",
-            dependencies: ["Kingfisher"],
-            path: "Sources"
+            dependencies: ["Kingfisher"]
         )
     ]
 )
