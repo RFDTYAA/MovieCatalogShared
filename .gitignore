@@ -1,17 +1,21 @@
-# Xcode
-build/
-*.xcodeproj
-*.xcworkspace
-*.xcshareddata
-*.xccheckout
-*.xcuserdatad
-
-# Swift Package Manager
+# Standar Swift Package Manager
 .build/
 Packages/
-Package.resolved
-Package.pins
-.swiftpm/
 
-# macOS
+# Standar macOS
 .DS_Store
+
+# Xcode
+# Abaikan file user-specific, tapi izinkan file shared
+# ===================================================
+build/
+DerivedData/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.swiftpm/xcode/xcuserdata/
+
+# Abaikan file lain yang tidak perlu di-commit
+# ========================================
+*.swp
+*~
