@@ -12,5 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Build Package with xcodebuild
-        run: xcodebuild -scheme MovieCatalogShared build
+      - name: Build for iOS Simulator
+        run: xcodebuild build -scheme MovieCatalogShared -destination 'platform=iOS Simulator,name=iPhone 14'
+
+      - name: Build for macOS
+        run: xcodebuild build -scheme MovieCatalogShared -destination 'platform=macOS,arch=x86_64'
