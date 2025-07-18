@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Build Package with xcodebuild
-        run: xcodebuild -scheme MovieCatalogShared build
+      - name: Build Swift Package
+        run: swift build

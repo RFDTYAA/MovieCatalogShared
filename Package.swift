@@ -1,4 +1,4 @@
-// swift-tools-version:5.9
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
@@ -6,7 +6,7 @@ let package = Package(
     defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
-        .macOS(.v10_15)
+        .macOS(.v12)
     ],
     products: [
         .library(
@@ -19,10 +19,11 @@ let package = Package(
     targets: [
         .target(
             name: "Shared",
-            dependencies: ["Kingfisher"],
-            resources: [
-                .process("Assets.xcassets")
-            ]
-        )
+            dependencies: ["Kingfisher"]
+            
+        ),
+        .testTarget(
+            name: "SharedTests",
+            dependencies: ["Shared"])
     ]
 )
