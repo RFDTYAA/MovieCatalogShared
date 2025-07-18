@@ -1,7 +1,7 @@
 import SwiftUI
 import Kingfisher
 
-struct MovieRowView: View {
+public struct MovieRowView: View {
     let movie: Movie
 
     public var body: some View {
