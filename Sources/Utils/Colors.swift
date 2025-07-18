@@ -1,21 +1,31 @@
 import SwiftUI
 
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
+
 public extension Color {
-    static let theme = ColorTheme()
-}
-
-public struct ColorTheme {
-    private static var bundle: Bundle {
-        class BundleFinder {}
-        return Bundle(for: BundleFinder.self)
+    struct theme {
+        public static var accent = Color.yellow
+        public static var background: Color {
+            #if canImport(UIKit)
+            return Color(UIColor.systemBackground)
+            #else
+            return Color(NSColor.windowBackgroundColor)
+            #endif
+        }
+        
+        public static var surface: Color {
+            #if canImport(UIKit)
+            return Color(UIColor.secondarySystemBackground)
+            #else
+            return Color(NSColor.underPageBackgroundColor)
+            #endif
+        }
+        
+        public static var primaryText = Color.primary
+        public static var secondaryText = Color.secondary
     }
-    
-    // PERBAIKAN: Sesuaikan nama dengan nama file di Assets.xcassets
-    public let background = Color("Background", bundle: Self.bundle)
-    public let primaryText = Color("PrimaryText", bundle: Self.bundle)
-    public let secondaryText = Color("SecondaryText", bundle: Self.bundle)
-    public let accent = Color("Accent", bundle: Self.bundle)
-    public let surface = Color("Surface", bundle: Self.bundle) // Nama ini sudah benar
-
-    public init() {}
 }
