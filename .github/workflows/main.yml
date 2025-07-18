@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Check out the code
         uses: actions/checkout@v4
-
+      
       - name: Build for iOS Simulator
-        run: xcodebuild build -scheme MovieCatalogShared -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.4'
+        run: xcodebuild build -scheme Shared -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.4'
 
       - name: Build for macOS
-        run: xcodebuild build -scheme MovieCatalogShared -destination 'platform=macOS,arch=x86_64'
+        run: xcodebuild build -scheme Shared -destination 'platform=macOS,arch=x86_64'

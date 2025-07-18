@@ -9,10 +9,7 @@ let package = Package(
         .macOS(.v12)
     ],
     products: [
-        .library(
-            name: "Shared",
-            targets: ["Shared"]
-        )
+        .library(name: "Shared", targets: ["Shared"])
     ],
     dependencies: [
         .package(url: "https://github.com/onevcat/Kingfisher.git", from: "8.0.0")
