@@ -3,7 +3,6 @@ import PackageDescription
 
 let package = Package(
     name: "Shared",
-    defaultLocalization: "en",
     platforms: [
         .iOS(.v15),
         .macOS(.v12)
@@ -11,7 +10,8 @@ let package = Package(
     products: [
         .library(
             name: "Shared",
-            targets: ["Shared"]),
+            targets: ["Shared"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/onevcat/Kingfisher.git", from: "8.0.0")
@@ -19,11 +19,8 @@ let package = Package(
     targets: [
         .target(
             name: "Shared",
-            dependencies: ["Kingfisher"]
-            
-        ),
-        .testTarget(
-            name: "SharedTests",
-            dependencies: ["Shared"])
+            dependencies: ["Kingfisher"],
+            path: "Sources"
+        )
     ]
 )
