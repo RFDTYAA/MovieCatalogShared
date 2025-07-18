@@ -12,5 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+<<<<<<< HEAD
       - name: Build Swift Package
         run: swift build
+=======
+      - name: Build for iOS Simulator
+        run: xcodebuild build -scheme MovieCatalogShared -destination 'platform=iOS Simulator,name=iPhone 14'
+
+      - name: Build for macOS
+        run: xcodebuild build -scheme MovieCatalogShared -destination 'platform=macOS,arch=x86_64'
+>>>>>>> e2ce0ab3defe3b0a06854aa8c16e1fb724216d15
